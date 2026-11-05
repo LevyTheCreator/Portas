@@ -1,16 +1,17 @@
 ﻿Console.Write("Személy vagy Jármű: ");
-string p_or_v = Console.ReadLine();
+string personOrVehicle = Console.ReadLine();
 
-while (p_or_v.ToLower() != "személy" || p_or_v.ToLower() != "jármű")
-    if (p_or_v.ToLower() == "személy")
-    {
+while (personOrVehicle.ToLower() != "személy" && personOrVehicle.ToLower() != "jármű")
+{
+    Console.WriteLine("Helytelen adat!");
+    personOrVehicle = Console.ReadLine();
+}
 
-    }
-    else if (p_or_v.ToLower() == "jármű")
-    {
+if (personOrVehicle.ToLower() == "személy")
+{
+    
+}
+else
+{
 
-    }
-    else
-    {
-        Console.WriteLine("Helytelen adat!");
-    }
+}
