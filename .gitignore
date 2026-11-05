@@ -1,0 +1,36 @@
+.vs/
+[Bb]in/
+[Oo]bj/
+out/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# User-specific & local settings
+*.user
+*.userprefs
+*.suo
+*.sln.docstates
+
+# NuGet Packages directory
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# Test & Coverage Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Lg]og.*/
+*.trx
+*.coverage
+*.coveragexml
+
+# Publish outputs
+*.azurePubxml
+*.pubxml
+*.pubxml.user
+
+# Environment and secrets (never commit these!)
+appsettings.Development.json
+*.env
+*.pem
