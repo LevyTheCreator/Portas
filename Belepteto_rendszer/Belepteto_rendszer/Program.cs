@@ -17,8 +17,18 @@ if (personOrVehicle.ToLower() == "személy")
 
     DateTime dateTime = DateTime.Now;
 
-    File.AppendAllText("person.txt", $"{name};{idNumber};{dateTime}\n");
-    Console.WriteLine("Person succesfully added to file");
+    if (File.Exists("person.txt"))
+    {
+        File.AppendAllText("person.txt", $"{name};{idNumber};{dateTime}\n");
+        Console.WriteLine("Person succesfully added to file");
+    }
+    else
+    {
+        File.WriteAllText("person.txt", "Név;Igazolványszám;Idő\n");
+        File.AppendAllText("person.txt", $"{name};{idNumber};{dateTime}\n");
+        Console.WriteLine("Person succesfully added to file");
+    }
+    
 }
 else
 {
@@ -30,6 +40,17 @@ else
 
     DateTime dateTime2 = DateTime.Now;
 
-    File.AppendAllText("vehicle.txt", $"{licensePlate};{type};{dateTime2}\n");
-    Console.WriteLine("Vehicle succesfully added to file");
+    if (File.Exists("person.txt"))
+    {
+        File.AppendAllText("vehicle.txt", $"{licensePlate};{type};{dateTime2}\n");
+        Console.WriteLine("Vehicle succesfully added to file");
+    }
+    else
+    {
+        File.WriteAllText("vehicle.txt", "Rendszám;Típus;Idő\n");
+        File.AppendAllText("vehicle.txt", $"{licensePlate};{type};{dateTime2}\n");
+        Console.WriteLine("Vehicle succesfully added to file");
+    }
+
+    
 }
