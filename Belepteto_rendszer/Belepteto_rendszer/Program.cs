@@ -19,7 +19,7 @@ if (personOrVehicle.ToLower() == "személy")
 
     DateTime dateTime = DateTime.Now;
 
-    File.AppendAllText("../../../../../person.txt", $"{name};{idNumber};{dateTime}\n");
+    File.AppendAllText("person.txt", $"{name};{idNumber};{dateTime}\n");
     Console.WriteLine("Person succesfully added to file");
 }
 else
@@ -32,6 +32,6 @@ else
 
     DateTime dateTime2 = DateTime.Now;
 
-    File.AppendAllText("../../../../../vehicle.txt", $"{licensePlate};{type};{dateTime2}\n");
+    File.AppendAllText("vehicle.txt", $"{licensePlate};{type};{dateTime2}\n");
     Console.WriteLine("Vehicle succesfully added to file");
 }
