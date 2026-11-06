@@ -1,5 +1,6 @@
 # Portás
 ![Alt text](/img/img1.png)
+
 A program be kéri és belvassa, hogy személy vagy jármű érkezik.
 
 <br />
@@ -20,12 +21,14 @@ Ha személy akkor bekéri a személy nevét, igazolványszámát és az OP rends
 <br />
 
 ![Alt text](/img/img4.png)
+
 Ha a fájl létezik hozzá adja az adatokat és ha nem akkor beírja az első sort, majd hozzá adja az adatokat.
 
 <br />
 <br />
 
 ![Alt text](/img/img5.png)
+
 Ez ugyanúgy megtörténik ha jármű, ahol a bekért adatok a rendszám és a típus.
 
 
