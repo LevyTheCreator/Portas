@@ -1,34 +1,23 @@
 # Portás
-![Alt text](/img/img1.png)
 
-A program be kéri és belvassa, hogy személy vagy jármű érkezik.
+![Alt text](/img/img6.png)
 
-<br />
-<br />
-
-![Alt text](/img/img2.png)
-
-A program addig kéri be amíg nem személy vagy járműt ír a felhasználó.
+Írja be hogy __személy__ vagy __jármű__ érkezik.
+A program __csak__ ezt a kettőt fogadja el. A nagy és kisbetű nem számít.
 
 <br />
 <br />
 
-![Alt text](/img/img3.png)
+![Alt text](/img/img7.png)
 
-Ha személy akkor bekéri a személy nevét, igazolványszámát és az OP rendszertől az időt.
-
-<br />
-<br />
-
-![Alt text](/img/img4.png)
-
-Ha a fájl létezik hozzá adja az adatokat és ha nem akkor beírja az első sort, majd hozzá adja az adatokat.
+Ha személy érkezik írja be a személy nevét és igazolvány számát.
 
 <br />
 <br />
 
-![Alt text](/img/img5.png)
+![Alt text](/img/img8.png)
 
-Ez ugyanúgy megtörténik ha jármű, ahol a bekért adatok a rendszám és a típus.
+Ha jármű érkezik írja be a jármű rendszámát és típúsát.
 
+További teendő nincs.
 
