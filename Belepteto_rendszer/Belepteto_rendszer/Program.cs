@@ -1,6 +1,4 @@
-﻿Console.WriteLine(Directory.GetCurrentDirectory());
-
-Console.Write("Személy vagy Jármű: ");
+﻿Console.Write("Személy vagy Jármű: ");
 string personOrVehicle = Console.ReadLine();
 
 while (personOrVehicle.ToLower() != "személy" && personOrVehicle.ToLower() != "jármű")
