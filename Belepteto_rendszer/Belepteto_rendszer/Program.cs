@@ -1,4 +1,7 @@
-﻿Console.Write("Személy vagy Jármű: ");
+﻿string filePathPerson = "../../../../../../Portas/stored_data/person.txt";
+string filePathVehicle = "../../../../../../Portas/stored_data/vehicle.txt";
+
+Console.Write("Személy vagy Jármű: ");
 string personOrVehicle = Console.ReadLine();
 
 while (personOrVehicle.ToLower() != "személy" && personOrVehicle.ToLower() != "jármű")
@@ -17,40 +20,70 @@ if (personOrVehicle.ToLower() == "személy")
 
     DateTime dateTime = DateTime.Now;
 
-    if (File.Exists("person.txt"))
-    {
-        File.AppendAllText("person.txt", $"{name};{idNumber};{dateTime}\n");
-        Console.WriteLine("Person succesfully added to file");
-    }
-    else
-    {
-        File.WriteAllText("person.txt", "Név;Igazolványszám;Idő\n");
-        File.AppendAllText("person.txt", $"{name};{idNumber};{dateTime}\n");
-        Console.WriteLine("Person succesfully added to file");
-    }
-    
+    File.AppendAllText(filePathPerson, $"{name};{idNumber};{dateTime}\n");
+    Console.WriteLine("Person succesfully added to file");
 }
 else
 {
     Console.Write("Adja meg a jármű rendszámát: ");
     string licensePlate = Console.ReadLine();
 
-    Console.Write("Adja meg a jármű típúsát: ");
-    string type = Console.ReadLine();
+    Console.Write("Adja meg a jármű márkáját: ");
+    string brand = Console.ReadLine();
 
     DateTime dateTime2 = DateTime.Now;
 
-    if (File.Exists("person.txt"))
+    File.AppendAllText(filePathVehicle, $"{licensePlate};{brand};{dateTime2}\n");
+    Console.WriteLine("Vehicle succesfully added to file");
+}
+
+Console.Write("Szeretne lekérni valamit(igen/nem): ");
+string retrive = Console.ReadLine();
+
+while (retrive.ToLower() != "igen" && retrive.ToLower() != "nem")
+{
+    Console.Write("Szeretne lekérni valamit(igen/nem): ");
+    retrive = Console.ReadLine();
+}
+
+if (retrive == "igen")
+{
+    Console.Write("Személy vagy jármű: ");
+    string retrivePOrV = Console.ReadLine();
+
+    while (retrivePOrV.ToLower() != "személy" && retrivePOrV.ToLower() != "jármű")
     {
-        File.AppendAllText("vehicle.txt", $"{licensePlate};{type};{dateTime2}\n");
-        Console.WriteLine("Vehicle succesfully added to file");
-    }
-    else
-    {
-        File.WriteAllText("vehicle.txt", "Rendszám;Típus;Idő\n");
-        File.AppendAllText("vehicle.txt", $"{licensePlate};{type};{dateTime2}\n");
-        Console.WriteLine("Vehicle succesfully added to file");
+        Console.WriteLine("Helytelen Adat!");
+        retrivePOrV = Console.ReadLine();
     }
 
-    
-}
+    if (retrivePOrV == "személy")
+    {
+        Console.Write("Adja meg a kereset személy nevét: ");
+        string retriveName = Console.ReadLine();
+
+        string[] sorok = File.ReadAllLines(filePathPerson);
+        bool found = false;
+
+        for (int i = 0; i < sorok.Length; i++)
+        {
+            string[] data = sorok[i].Split(";");
+
+            if (data.Contains(retriveName))
+            {
+                Console.WriteLine($"Adatok: {sorok[i]}");
+                found = true;
+            }
+            else
+            {
+                continue;
+            }
+        }
+
+        if (found == false)
+        {
+            Console.WriteLine("Nincs ilyen személy!");
+        }
+    }
+        
+}  
