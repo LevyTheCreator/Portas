@@ -8,6 +8,8 @@ A program __csak__ ezt a kettőt fogadja el. A nagy- és kisbetű nem számít.
 <br />
 <br />
 
+<hr>
+
 ### Hozzáadás
 ![Alt text](https://github.com/LevyTheCreator/Portas/blob/7541edd965aa7f850b958285f8ddc4c4548aa6bd/img/img6.png)
 
@@ -28,8 +30,10 @@ Ha személy érkezik írja be a személy nevét és igazolvány számát.
 
 Ha jármű érkezik írja be a jármű rendszámát és márkáját.
 
+<hr>
 <br />
 <br />
+
 
 ### Lekérés
 ![Alt text](https://github.com/LevyTheCreator/Portas/blob/7541edd965aa7f850b958285f8ddc4c4548aa6bd/img/img10.png)
